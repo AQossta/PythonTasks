@@ -62,7 +62,7 @@ with open("myRecommendation.txt", "r") as myRecommendation:
 
 
 listArr = {}
-with open("myRecommendation.txt",  "r") as myRecommendation:
+with open("myRecommendation.txt", "r") as myRecommendation:
    for i, line in enumerate(myRecommendation):
        listArr[i] = len(line)
 
