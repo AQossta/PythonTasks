@@ -30,10 +30,10 @@ tens = twoDigitNumber // 10
 print(f"The answer to the fourth task: {tens}")
 
 #TASK-5
-N = 7
-print(f"The answer to the fifth task: {(N + 2 - (N % 2))}")
-N = 8
-print(f"The answer to the fifth task: {(N + 2 - (N % 2))}")
+numN = 7
+print(f"The answer to the fifth task: {(numN + 2 - (numN % 2))}")
+numN = 8
+print(f"The answer to the fifth task: {(numN + 2 - (numN % 2))}")
 
 #TASK-6
 students = [20, 21, 22, 17]
@@ -65,9 +65,85 @@ print(f"The answer to the ninth task: {a}, {b}")
 #TASK-10
 c = int(input("Введите a: "))
 d = int(input("Введите b: "))
-c , d = d, c
+c, d = d, c
 print(f"The answer to the tenth task: {c}, {d}")
 
 #TASK-11
+lessonNumber = int(input())
+startMinutes = 600
+pairs = ((lessonNumber - 1) // 2)
+if lessonNumber % 2 == 1:
+    totalMinutes = startMinutes + lessonNumber * 55 +pairs * (15 + 25)
+else:
+    totalMinutes = startMinutes + lessonNumber * 55 + (pairs * (15 + 25)) + 15
+
+endHour = totalMinutes // 60
+endMinute = totalMinutes % 60
+
+print(f"The answer to the eleventh task: {endHour}:{endMinute:02d}")
+
+#TASK-12
+A = int(input("Введите A: "))
+B = int(input("Введите B: "))
+N = int(input("Введите N: "))
+
+totalTiyn = (A * 100 + B) *N
+totalTenge = totalTiyn // 100
+remainingTiyn = totalTiyn % 100
+print(f"The answer to the twelfth task: {totalTenge} {remainingTiyn}")
+
+#TASK-13
+firstHour = int(input("Введите часы: "))
+firstMin = int(input("Введите минуты: "))
+firstSec = int(input("Введите секунды: "))
+secondHour = int(input("Введите часы: "))
+secondMin = int(input("Введите минуты: "))
+secondSec = int(input("Введите секунды: "))
+
+totalFirstSec = ((firstHour * 3600) + (firstMin * 60) + firstSec)
+totalSecondSec = ((secondHour * 3600) + (secondMin * 60) + secondSec)
+
+totalSec = totalSecondSec - totalFirstSec
+print(f"The answer to the thirteenth  task: {totalSec}")
+
+#TASK-14
+n = int(input("Количество школьников: "))
+k = int(input("Количество яблок: "))
+
+minApples = k // n
+remainingApples2 = k % n
+studentsWithLess = n - remainingApples2 if remainingApples2 > 0 else 0
+print(f"The answer to the fourteenth task: {studentsWithLess}")
+
+#TASK-15
+hMetr = int(input("Введите h: "))
+aMetr = int(input("Введите a: "))
+bMetr = int(input("Введите b: "))
+
+dailyRise = aMetr - bMetr
+
+if (hMetr - aMetr) % dailyRise == 0:
+    days = (hMetr - aMetr) // dailyRise + 1
+else:
+    days = (hMetr - aMetr) // dailyRise + 2
+
+print(f"The answer to the fifteenth  task: {days}")
+
+#TASK-16
+nNat = int(input())
+mNat = int(input())
+
+if nNat % mNat == 0 or mNat % nNat == 0:
+    print("The answer to the sixteenth task: 1")
+else:
+    print("The answer to the sixteenth task: 0")
+
+
+
+
+
+
+
+
 
 
